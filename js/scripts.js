@@ -10,3 +10,12 @@ buttons.forEach(button => {
         button.style.transform = 'scale(1)';
     });
 });
+
+// Função para abrir/fechar o menu hambúrguer(celular)
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');      // Mostra ou esconde o menu
+    menuToggle.classList.toggle('open');  // Anima o ícone de hambúrguer
+});

@@ -304,6 +304,58 @@ video {
       margin-bottom: 20px;
     }
   }
-  
+  /* ========== MENU HAMBURGUER PARA MOBILE ========== */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: #3e3277; /* roxo escuro */
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #c3bbe9; /* roxo claro */
+    padding: 10px 14px;
+    border-radius: 50px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #b0a5de; /* hover mais escuro */
+}
+
+/* Modo normal: menu visível */
+#menu {
+    display: flex;
+}
+
+/* Quando for tela menor */
+@media (max-width: 1100px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        background-color: #3e3277;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 0 0 0 10px;
+    }
+
+    #menu.active {
+        display: flex;
+    }
+
+    #menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
 
 

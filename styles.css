@@ -343,4 +343,113 @@ footer .line-footer3 {
       margin-bottom: 20px;
     }
   }
-  
+  /* ========== MENU HAMBURGUER PARA MOBILE ========== */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Modo normal: menu visível */
+#menu {
+    display: flex;
+}
+
+/* Quando for tela menor */
+@media (max-width: 1100px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        background-color: #3e3277;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 0 0 0 10px;
+    }
+
+    #menu.active {
+        display: flex;
+    }
+
+    #menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    .home-container {
+        padding: 80px 20px;
+    }
+
+    .about .row {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    footer .line-footer2 .box-line-footer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .content p {
+        font-size: 1.4rem;
+    }
+}
+/* Titulo do artigo e botão de baixar */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 60px 20px;
+        display: flex;
+        justify-content: flex-start;  /* Alinha à esquerda */
+        align-items: flex-start;      /* Cola no topo */
+    }
+
+    .content {
+        text-align: left;
+    }
+
+    .content h3 {
+        font-size: 2.2rem;/* 2.2rem */
+        line-height: 1.3;
+        position: relative;
+        z-index: 2;
+    }
+    /* Camada de sobreposição atrás do título */
+    .content h3::before {
+        content: ''; /* Cria uma pseudo-elemento */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.6); /* Cor branca com transparência */
+        z-index: -1; /* Garante que a camada de fundo fique atrás do texto */
+    }
+
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.5rem;
+    }
+
+}
