@@ -415,6 +415,11 @@ footer .line-footer3 {
         font-size: 1.4rem;
     }
 }
+@media (max-width: 768px) {
+    .search-box {
+        display: none; /* Esconde a caixa de pesquisa no mobile */
+    }
+}
 /* Titulo do artigo e botão de baixar */
 @media (max-width: 768px) {
     .home-container {
@@ -434,16 +439,21 @@ footer .line-footer3 {
         position: relative;
         z-index: 2;
     }
+    /* Estilo para o título específico com fundo branco transparente */
+    .titulo-especifico {
+        position: relative; /* Necessário para o pseudo-elemento ser posicionado corretamente */
+    }
+
     /* Camada de sobreposição atrás do título */
-    .content h3::before {
-        content: ''; /* Cria uma pseudo-elemento */
+    .titulo-especifico::before {
+        content: ''; /* Cria um pseudo-elemento */
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         background: rgba(255, 255, 255, 0.6); /* Cor branca com transparência */
-        z-index: -1; /* Garante que a camada de fundo fique atrás do texto */
+        z-index: -1; /* Garante que o fundo fique atrás do texto */
     }
 
 
